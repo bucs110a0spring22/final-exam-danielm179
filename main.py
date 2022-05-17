@@ -22,12 +22,12 @@ def main():
   if response_two.status_code == 200:
     print(response_two.content)
 
-  for item in response_one['class']:
+  for item in MakeApiCall_first('class'):
     return item
     item = item_one
     print("these are the classes found in this blockchain file" + str(item_one))
     
-  for item in response_two['class']:
+  for item in MakeApiCall_second('class'):
     return item
     item = item_two
     print("these are the classes found throughout this cloud file" + str(item_two))
